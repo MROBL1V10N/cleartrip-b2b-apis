@@ -12,6 +12,8 @@ tags:
   - name: Search V4 APIs
   - name: Details V4 API
   - name: Provisional Book V4 API
+    description: |
+      **Purpose**: Hold booking
   - name: Book V4 API
     description: |
       **Purpose**: Finalize a hotel booking using the provisional booking ID received from a successful provisional booking.
