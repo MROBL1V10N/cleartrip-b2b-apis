@@ -1,0 +1,8 @@
+type: object
+properties:
+  roomId:
+    type: string
+  rates:
+    type: array
+    items:
+      $ref: './rate.yaml' 

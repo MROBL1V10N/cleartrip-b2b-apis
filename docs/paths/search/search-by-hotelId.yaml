@@ -1,0 +1,46 @@
+post:
+  tags:
+    - Search V4 APIs
+  summary: Search By HotelIds
+  description: Retrieves rate plan details for a list of hotelIds to populate the hotel search page.
+  operationId: getSearchByHotelIdResults
+  parameters:
+    - name: x-ct-api-key
+      in: header
+      description: API key for authentication
+      required: true
+    - name: x-ct-request-id
+      in: header
+      description: Unique request ID for tracking
+      required: true
+    - name: x-lineage-id
+      in: header
+      description: Unique lineage ID for tracking
+      required: true
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/search/search-by-hotelId/request/search-by-hotelId-request.yaml'
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/search/shared/search-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      description: Forbidden
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/common/anveshak-error-response.yaml'
+    '500':
+      description: Internal Server Error
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/common/anveshak-error-response.yaml' 

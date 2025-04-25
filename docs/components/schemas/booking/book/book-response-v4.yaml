@@ -1,0 +1,6 @@
+type: object
+properties:
+  tripId:
+    type: string
+  confirmationNumber:
+    type: string 

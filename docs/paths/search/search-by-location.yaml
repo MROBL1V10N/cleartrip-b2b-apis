@@ -1,0 +1,50 @@
+post:
+  tags:
+    - Search V4 APIs
+  summary: Search By Location
+  description: Fetches rate plan details for hotels based on location and search criteria to populate the hotel search page.
+  operationId: getSearchByLocationResults
+  parameters:
+    - name: x-ct-api-key
+      in: header
+      description: API key for authentication
+      required: true
+    - name: x-ct-request-id
+      in: header
+      description: Unique request ID for tracking
+      required: true
+    - name: x-lineage-id
+      in: header
+      description: Unique lineage ID for tracking
+      required: true
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/search/search-by-location/request/search-by-location-request.yaml'
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/search/shared/search-response.yaml'
+    '400':
+      description: Bad Request
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/common/anveshak-error-response.yaml'
+    '403':
+      description: Forbidden
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/common/anveshak-error-response.yaml'
+    '500':
+      description: Internal Server Error
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/common/anveshak-error-response.yaml' 

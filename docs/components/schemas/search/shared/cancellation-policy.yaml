@@ -1,0 +1,10 @@
+type: object
+properties:
+  text:
+    type: string
+    nullable: true
+  cancellationPolicySlabs:
+    type: array
+    items:
+      $ref: './cancellation-policy-slab.yaml'
+    nullable: true 

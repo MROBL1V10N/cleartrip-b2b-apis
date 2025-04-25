@@ -1,0 +1,7 @@
+type: object
+properties:
+  amount:
+    type: number
+  category:
+    type: string
+    enum: [BASE_FARE, TAX, DISCOUNT] 

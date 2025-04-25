@@ -1,0 +1,11 @@
+type: object
+properties:
+  startTime:
+    type: integer
+    format: int64
+  endTime:
+    type: integer
+    format: int64
+  penaltyAmount:
+    type: number
+    format: double 

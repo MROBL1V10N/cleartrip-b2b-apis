@@ -1,0 +1,8 @@
+type: object
+properties:
+  affiliateTripReference:
+    type: string
+  provisionalBookId:
+    type: string
+  paymentDetails:
+    $ref: '../common/payment-details.yaml' 

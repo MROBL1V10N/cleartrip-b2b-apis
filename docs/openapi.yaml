@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: Cleartrip B2B V4 APIs
+  version: 0.0.1
+
+servers:
+  - url: https://api.cleartrip.com
+  - url: https://b2b.cleartrip.com
+
+tags:
+  - name: Content V4 APIs
+  - name: Search V4 APIs
+  - name: Details V4 API
+  - name: Provisional Book V4 API
+  - name: Book V4 API
+    description: |
+      **Purpose**: Finalize a hotel booking using the provisional booking ID received from a successful provisional booking.
+
+      - Provisional booking is valid for **15 minutes**.
+      - If used after expiry, the API returns an **invalid provisional booking ID** error.
+
+      Only call this after successful provisional hold.
+  - name: Trip V4 API
+  - name: Cancel and RefundInfo APIs
+
+paths:
+  $ref: './paths/index.yaml'
+
+components:
+  schemas:
+    $ref: './components/schemas/index.yaml'

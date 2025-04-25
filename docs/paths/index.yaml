@@ -1,0 +1,8 @@
+/hotels/api/v4/search:
+  $ref: './search/index.yaml#/search-by-hotelId'
+
+/hotels/api/v4/search-by-location:
+  $ref: './search/index.yaml#/search-by-location'
+
+/hotels/api/v4/book:
+  $ref: './booking/index.yaml#/book'

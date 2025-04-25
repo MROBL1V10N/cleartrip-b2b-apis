@@ -1,0 +1,10 @@
+type: object
+properties:
+  hotelId:
+    type: string
+  isDnd:
+    type: boolean
+  rooms:
+    type: array
+    items:
+      $ref: './room.yaml' 

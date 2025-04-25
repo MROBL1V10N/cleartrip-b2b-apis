@@ -1,0 +1,26 @@
+type: object
+properties:
+  rateId:
+    type: string
+  rateName:
+    type: string
+  bookingCode:
+    type: string
+  freeCancellation:
+    type: boolean
+  freeBreakfast:
+    type: boolean
+  cancellationPolicy:
+    $ref: './cancellation-policy.yaml'
+  bedTypes:
+    type: array
+    items:
+      type: string
+  inclusions:
+    type: array
+    items:
+      type: string
+  pricing:
+    $ref: './pricing.yaml'
+  gstInfo:
+    $ref: './gst-info.yaml' 
