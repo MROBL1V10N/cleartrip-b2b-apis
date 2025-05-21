@@ -16,11 +16,6 @@ post:
   parameters:
     - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
     - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
-    - name: x-meta-data
-      in: header
-      required: false
-      schema:
-        type: string
     - name: hotelId
       in: path
       description: The unique identifier associated with the Hotel.

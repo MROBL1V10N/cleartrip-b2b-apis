@@ -1,7 +1,8 @@
 type: object
 properties:
   amount:
-    type: number
+    type: double
+    example: 5579.80
   category:
     type: string
     enum: [BASE_FARE, TAX, DISCOUNT] 

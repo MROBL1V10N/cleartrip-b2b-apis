@@ -19,6 +19,9 @@
 /hotels/api/v4/search-by-location:
   $ref: './search/index.yaml#/search-by-location'
 
+/hotels/api/v4/detail:
+  $ref: './details/index.yaml#/hotel-detail'
+
 /hotels/api/v4/provisional-book:
   $ref: './prov-book/index.yaml#/prov-book'
 

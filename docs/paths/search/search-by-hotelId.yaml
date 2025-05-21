@@ -1,6 +1,6 @@
 post:
   tags:
-    - Search V4 APIs
+    - Search APIs
   summary: Search By HotelIds
   description: Retrieves rate plan details for a list of hotelIds to populate the hotel search page.
   operationId: getSearchByHotelIdResults

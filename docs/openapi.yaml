@@ -22,9 +22,10 @@ tags:
       **Note:**  
       - Adhering to the recommended usage ensures minimal impact on system performance and user experience.
 
-  - name: Search V4 APIs
+  - name: Search APIs
 
-  - name: Details V4 API
+  - name: Details API
+    description: This api provides detailed ratePlan info for a hotel.
 
   - name: Provisional Book API
     description: |

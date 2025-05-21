@@ -4,9 +4,6 @@ properties:
   hotelId:
     type: string
     description: Unique identifier for the hotel.
-  hotelMetaData:
-    $ref: './hotel-meta-data.yaml'
 required:
   - hotelId
-  - hotelMetaData
     

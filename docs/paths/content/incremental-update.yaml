@@ -23,7 +23,25 @@ post:
         type: integer
         format: int64
         description: Epoch timestamp for last updated time.
+    - in: query
+      name: pageSize
+      schema:
+        type: integer
+        minimum: 2000
+        maximum: 5000
+        default: 2000
+      description: |
+        Number of records to fetch in a page.
+      required: false
 
+    - in: query
+      name: nextPageToken
+      schema:
+        type: string
+      description: |
+        Page token received in the last page response.  
+        Mandatory only for fetching subsequent pages.
+      required: false
   responses:
     '200':
       description: OK
