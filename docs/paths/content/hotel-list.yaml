@@ -1,0 +1,37 @@
+post:
+  tags:
+    - Content APIs
+  description: |
+      This API retrieves a list of hotels for a specified location based on the provided location ID and location type.
+
+      **Features:**  
+      - Fetches hotel information for a specific location.  
+      - Supports pagination for efficient retrieval of large hotel lists.  
+      - Ensures scalable and optimized data access.
+
+      This allows users to seamlessly obtain hotel details for dynamic location-based searches.
+
+  summary: Get Hotel List
+  operationId: getHotelList
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - name: x-meta-data
+      in: header
+      required: false
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/content/response/hotel-list-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'
